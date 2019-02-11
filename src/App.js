@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="list-item-card">
         <Display message="Now we're using props which help us abide by the SRP and Open/Close principle."/>
       </div>
     );
