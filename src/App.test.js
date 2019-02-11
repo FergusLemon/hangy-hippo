@@ -15,6 +15,18 @@ it('renders a div element with the className prop set to be an item card', () =>
   expect(
     wrapper
       .find('div')
-      .findWhere(e => e.props().className === 'list-item-card').length
+      .findWhere(e => e.props().className === 'list-item-card')
+      .length
       ).toBe(1);
+});
+
+it('renders a stringified version of props in the div', () => {
+  const wrapper = shallow(<App />);
+
+  expect(
+    wrapper
+      .find('div')
+      .findWhere(e => e.props().className === 'list-item-card')
+      .text()
+    ).toBe(JSON.stringify(App.defaultProps));
 });

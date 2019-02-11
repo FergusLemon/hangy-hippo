@@ -3,10 +3,19 @@ import Display from './Display';
 import './App.css';
 
 class App extends Component {
+  static defaultProps = {
+    "id": 641803,
+    "title": "Easy & Delish! ~ Apple Crumble",
+    "image": "https://spoonacular.com/recipeImages/Easy---Delish--Apple-Crumble-641803.jpg",
+    "usedIngredientCount": 3,
+    "missedIngredientCount": 4,
+    "likes": 1
+  };
+
   render() {
     return (
       <div className="list-item-card">
-        <Display message="Now we're using props which help us abide by the SRP and Open/Close principle."/>
+        { JSON.stringify(this.props) }
       </div>
     );
   }
