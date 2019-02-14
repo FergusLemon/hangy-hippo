@@ -7,36 +7,39 @@
   word-wrap: break-word;
   display: flex;
   align-items: center;
+  position: relative;
+  height: 100px;
+  width: 100%;
 }
 
-@media screen and (min-width: 1025px) {
-  html, body, .App {
-    height: 100%;
-  }
+.recipe-list-item-title, .recipe-list-item-ingredient-count, .recipe-list-item-missed-ingredient-count {
+  z-index: 1;
+  position: absolute;
+  left: 110px;
 }
 
-html, .App {
-  min-height: 100%;
+.recipe-list-item-title {
+  font-size: 24px;
+  top: 2px;
 }
 
-.App {
-  background-color: #ffffff;
+.recipe-list-item-ingredient-count {
+  font-size: 16px;
+  top: 35px;
 }
 
-@media screen and (min-width: 1200px) {
-  .content-row {
-    height: 65%;
-  }
+.recipe-list-item-missed-ingredient-count {
+  font-size: 16px;
+  top: 70px;
 }
 
-.ingredients-col {
-  height: 100%;
-}
-
-.recipes-col {
-  height: 100%;
-}
-
-.panel.header {
-  margin-top: 20px;
+.recipe-list-item-image {
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 0;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
