@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import Display from './Display';
+import RecipeItem from './recipeItem/components/RecipeItem';
 import './App.css';
 
 class App extends Component {
@@ -14,30 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="list-item-card recipe-list-item">
-        <div className="recipe-list-item-title-container">
-          <div className="recipe-list-item-title">{this.props.title}</div>
-        </div>
-        <div className="recipe-list-item-image-container">
-          <img
-            className="img-responsive recipe-list-item-image"
-            src={this.props.image}
-            alt={this.props.title}
-          />
-        </div>
-        <div className="recipe-list-item-ingredient-count">
-          You have {this.props.missedIngredientCount === 0
-            ? "all"
-            : this.props.usedIngredientCount
-          } ingredients.
-        </div>
-        {
-          this.props.missedIngredientCount > 0 &&
-          <div className="recipe-list-item-missed-ingredient-count">
-            There are {this.props.missedIngredientCount} ingredients missing.
-          </div>
-        }
-      </div>
+      <RecipeItem {...this.props} />
     );
   }
 }

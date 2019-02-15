@@ -11,35 +11,3 @@
   height: 100px;
   width: 100%;
 }
-
-.recipe-list-item-title, .recipe-list-item-ingredient-count, .recipe-list-item-missed-ingredient-count {
-  z-index: 1;
-  position: absolute;
-  left: 110px;
-}
-
-.recipe-list-item-title {
-  font-size: 24px;
-  top: 2px;
-}
-
-.recipe-list-item-ingredient-count {
-  font-size: 16px;
-  top: 35px;
-}
-
-.recipe-list-item-missed-ingredient-count {
-  font-size: 16px;
-  top: 70px;
-}
-
-.recipe-list-item-image {
-  border-radius: 4px;
-  overflow: hidden;
-  z-index: 0;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
