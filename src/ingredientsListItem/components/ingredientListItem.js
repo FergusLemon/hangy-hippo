@@ -5,13 +5,13 @@ const propTypes = {
   children: PropTypes.string
 };
 
-const IngredientListItem = (props) => {
+const IngredientListItem = (props) => (
   <div className="ingredient-list-item">
     <div className="ingredient-list-item-value">
-      {props.children};
+      {props.children}
     </div>
   </div>
-};
+);
 
 IngredientListItem.propTypes = propTypes;
 
